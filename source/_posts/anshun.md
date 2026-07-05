@@ -89,4 +89,4 @@ cover: https://cdn.pixabay.com/photo/2017/08/26/10/12/guizhou-2682310_1280.jpg
 
 ---
 
-🔜 下一篇：遵义
+🔜 [下一篇：遵义](/2026/07/05/zunyi/)

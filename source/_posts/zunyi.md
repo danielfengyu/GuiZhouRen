@@ -155,4 +155,4 @@ cover: https://cdn.pixabay.com/photo/2022/01/20/10/49/danxia-landform-6946090_12
 
 ---
 
-🔜 下一篇：六盘水
+🔜 [下一篇：六盘水](/2026/07/05/liupanshui/)
