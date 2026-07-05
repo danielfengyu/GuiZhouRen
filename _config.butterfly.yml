@@ -1,0 +1,125 @@
+# --------------------------------------
+# Butterfly Theme Configuration
+# Docs: https://butterfly.js.org/
+# --------------------------------------
+
+# Navigation Menu
+menu:
+  首页: / || fas fa-home
+  文章: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-heart
+
+# Favicon
+favicon: /img/favicon.png
+
+# Avatar
+avatar:
+  img: /img/avatar.png
+  effect: true
+
+# Social links
+social:
+  github: https://github.com/ || fab fa-github
+  weibo: https://weibo.com/ || fab fa-weibo
+
+# Post meta display
+post_meta:
+  page:
+    date_type: created
+    categories: true
+    tags: true
+  post:
+    date_type: created
+    categories: true
+    tags: true
+
+# Code blocks
+highlight_theme: mac
+
+# Sidebar settings
+aside:
+  enable: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: 贵州黔行
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 关注
+      link: https://github.com/
+  card_announcement:
+    enable: true
+    content: 走遍大地神州，醉美多彩贵州
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+  card_tags:
+    enable: true
+    limit: 40
+    color: true
+  card_archives:
+    enable: true
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+
+# Footer
+footer_bg: false
+
+# Word count
+wordcount:
+  enable: true
+  post_wordcount: true
+
+# Local search
+local_search:
+  enable: true
+  preload: true
+
+# Copy settings
+copyright:
+  enable: true
+  limit_count: 50
+
+# Dark mode
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# Beautify
+beautify:
+  enable: true
+  field: post
+  title-prefix-icon: '\f0c1'
+
+# PWA (Progressive Web App)
+pwa:
+  enable: false
+
+# Comments (disabled by default, enable when needed)
+comments:
+  use:
+  text: true
+  lazyload: true
+  count: true
+
+# Inject custom CSS/JS (you can add Google Analytics etc.)
+inject:
+  head:
+  bottom:
+
+# CDN settings
+cdn:
+  enable: false
+
+# Other
+index_post_content:
+  method: 2
+  length: 200
