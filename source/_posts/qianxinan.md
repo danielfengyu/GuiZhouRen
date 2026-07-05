@@ -10,7 +10,7 @@ tags:
   - 美食
 categories: 黔西南
 description: 黔西南布依族苗族自治州，被徐霞客誉为"天下山峰何其多，唯有此处峰成林"。万峰林雄奇壮阔，马岭河峡谷飞瀑成群，布依族八音坐唱婉转悠扬，是贵州西南角的山水秘境。
-cover: https://cdn.pixabay.com/photo/2018/01/25/17/09/landscape-3106787_1280.jpg
+cover: /img/qianxinan.jpg
 ---
 
 ## 🏙️ 城市名片

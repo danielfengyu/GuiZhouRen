@@ -9,7 +9,7 @@ tags:
   - 美食
 categories: 黔北
 description: 遵义，贵州唯一拥有世界自然遗产（赤水丹霞）和世界文化遗产（海龙屯）的"双遗"城市。这里是转折之城，茅台酒的故乡，红色历史与山水秘境在此交汇。
-cover: https://cdn.pixabay.com/photo/2022/01/20/10/49/danxia-landform-6946090_1280.jpg
+cover: /img/zunyi.jpg
 ---
 
 ## 🏙️ 城市名片

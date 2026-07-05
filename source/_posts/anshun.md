@@ -9,7 +9,7 @@ tags:
   - 美食
 categories: 黔中
 description: 安顺，贵州最响亮的旅游名片。亚洲第一大瀑布黄果树在此轰鸣，600年大明屯堡在此守望，一座让人来了就不想走的城市。
-cover: https://cdn.pixabay.com/photo/2017/08/26/10/12/guizhou-2682310_1280.jpg
+cover: /img/anshun.jpg
 ---
 
 ## 🏙️ 城市名片

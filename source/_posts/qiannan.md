@@ -10,7 +10,7 @@ tags:
   - 美食
 categories: 黔南
 description: 黔南布依族苗族自治州，拥有"地球绿宝石"荔波小七孔和"中国天眼"FAST两大世界级IP。这里是布依族、苗族的聚居地，喀斯特山水甲天下，民族风情浓郁。
-cover: https://cdn.pixabay.com/photo/2016/09/02/23/36/libo-1640209_1280.jpg
+cover: /img/qiannan.jpg
 ---
 
 ## 🏙️ 城市名片

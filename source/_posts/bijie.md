@@ -9,7 +9,7 @@ tags:
   - 美食
 categories: 黔西
 description: 毕节，中国最大的杜鹃花海所在地，拥有"世界地质公园"织金洞和贵州最大淡水湖威宁草海。春赏百里杜鹃，夏游织金洞，秋看草海候鸟，冬享高原暖阳。
-cover: https://cdn.pixabay.com/photo/2015/12/15/15/17/river-1094301_1280.jpg
+cover: /img/bijie.jpg
 ---
 
 ## 🏙️ 城市名片

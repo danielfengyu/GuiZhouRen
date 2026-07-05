@@ -11,7 +11,7 @@ tags:
   - 美食
 categories: 黔东南
 description: 黔东南苗族侗族自治州，全球最大的苗侗聚居区。西江千户苗寨万家灯火璀璨，肇兴侗寨侗族大歌天籁之音，镇远古城千年太极古镇。这里是联合国推荐的"人类疲惫心灵的最后家园"。
-cover: https://cdn.pixabay.com/photo/2019/09/03/10/03/miao-4449179_1280.jpg
+cover: /img/qiandongnan.jpg
 ---
 
 ## 🏙️ 城市名片

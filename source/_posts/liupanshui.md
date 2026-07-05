@@ -9,7 +9,7 @@ tags:
   - 美食
 categories: 黔西
 description: 六盘水，中国唯一以气候特征命名的城市——"中国凉都"。夏季均温19℃，乌蒙大草原一望无际，北盘江大桥高耸入云，是避暑胜地和户外天堂。
-cover: https://cdn.pixabay.com/photo/2017/03/02/10/58/clouds-2110884_1280.jpg
+cover: /img/liupanshui.jpg
 ---
 
 ## 🏙️ 城市名片

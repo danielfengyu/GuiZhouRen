@@ -8,7 +8,7 @@ tags:
   - 美食
 categories: 黔中
 description: 贵阳市是贵州省省会，素有"中国避暑之都"美誉。这座被群山环抱的城市，夏无酷暑、冬无严寒，是无数人向往的宜居之地。
-cover: /img/jiaxiu.jpg
+cover: /img/guiyang.jpg
 ---
 
 ## 🏙️ 城市名片

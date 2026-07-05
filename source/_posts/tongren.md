@@ -9,7 +9,7 @@ tags:
   - 美食
 categories: 黔东
 description: 铜仁，武陵山脉腹地的秘境之城。世界自然遗产梵净山高耸入云，是中国五大佛教名山之一。锦江穿城而过，苗疆古寨星罗棋布，是一片被时光遗忘的桃源之地。
-cover: https://cdn.pixabay.com/photo/2017/10/13/15/26/fantian-2848194_1280.jpg
+cover: /img/tongren.jpg
 ---
 
 ## 🏙️ 城市名片
