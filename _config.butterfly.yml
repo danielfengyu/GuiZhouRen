@@ -3,6 +3,18 @@
 # Docs: https://butterfly.js.org/
 # --------------------------------------
 
+# Top Image (顶部背景图)
+# 首页顶部图 | 使用 Pixabay CC0 免费黄果树瀑布图
+# 图片ID: 2682310 | 来源: https://pixabay.com/zh/photos/guizhou-huangguoshu-fall-guizhou-2682310/
+index_img: https://cdn.pixabay.com/photo/2017/08/26/10/12/guizhou-2682310_1280.jpg
+
+# 默认顶部图（文章页、分类页等没有单独设置 top_img 时使用）
+default_top_img: https://cdn.pixabay.com/photo/2017/08/26/10/12/guizhou-2682310_1280.jpg
+
+# 顶部图高度（推荐设为全屏高度的一半，留出内容空间）
+index_top_img_height: 400px
+index_site_info_top: 150px
+
 # Navigation Menu
 menu:
   首页: / || fas fa-home
@@ -110,9 +122,28 @@ comments:
   lazyload: true
   count: true
 
-# Inject custom CSS/JS (you can add Google Analytics etc.)
+# Inject custom CSS/JS
 inject:
   head:
+    # 百度统计 (获取ID: https://tongji.baidu.com)
+    # 替换 YOUR_BAIDU_ID 后取消注释
+    # - '<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?YOUR_BAIDU_ID";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>'
+    # JSON-LD 结构化数据（Google富文本搜索结果）
+    - |
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "贵州黔行",
+        "url": "https://guizhouren.netlify.app",
+        "description": "走遍大地神州，醉美多彩贵州。贵州88县市旅游攻略、美食、景点全收录。",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://guizhouren.netlify.app/search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+      </script>
   bottom:
 
 # CDN settings

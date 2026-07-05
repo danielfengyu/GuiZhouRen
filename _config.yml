@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 贵州黔行
-subtitle: ''
-description: '走遍大地神州，醉美多彩贵州'
-keywords: '贵州,旅游,黔行,县市,美食,文化,风景'
+title: 贵州黔行 - 走遍贵州88县市，发现黔地之美
+subtitle: '贵州旅游全攻略'
+description: '贵州黔行是一个专注贵州全域旅游的推广网站，覆盖贵阳、安顺、遵义、毕节等88个县市的美食、景点、人文与出行攻略。走遍大地神州，醉美多彩贵州。'
+keywords: '贵州旅游,贵州美食,贵州景点,黄果树瀑布,甲秀楼,安顺,贵阳,遵义,毕节,黔东南,贵州攻略,贵州自由行,贵州自驾游,贵州避暑,少数民族文化,苗族,侗族'
 author: 山间听雨者
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -92,3 +92,33 @@ theme: butterfly
 # Deployment
 deploy:
   type: ''
+
+# ---------------
+# SEO Settings
+# ---------------
+
+# Sitemap (for Google / Bing)
+sitemap:
+  path:
+    - sitemap.xml
+    - baidusitemap.xml
+  rel: false
+  tags: true
+  categories: true
+
+# Baidu Sitemap (for Baidu)
+baidusitemap:
+  path: baidusitemap.xml
+
+# Auto Description (自动为每篇文章生成 meta description)
+auto_description:
+  enable: true
+  length: 160
+
+# RSS Feed (for content syndication)
+feed:
+  enable: false  # 设为 true 后需装 hexo-generator-feed
+  type: atom
+  path: atom.xml
+  limit: 20
+  content_limit: 140

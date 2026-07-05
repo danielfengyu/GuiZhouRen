@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://guizhouren.netlify.app/sitemap.xml
+Sitemap: https://guizhouren.netlify.app/baidusitemap.xml
+
+# Crawl-delay (seconds between requests)
+Crawl-delay: 5
+
+# Disallow admin/internal paths
+Disallow: /js/
+Disallow: /css/
+Disallow: /lib/
