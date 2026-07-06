@@ -114,12 +114,34 @@ beautify:
 pwa:
   enable: false
 
-# Comments (disabled by default, enable when needed)
+# Comments: Waline (deployed on Netlify Functions + TiDB Serverless)
 comments:
   use:
+    - Waline
   text: true
   lazyload: true
   count: true
+
+# Waline Configuration
+waline:
+  serverURL: https://guizhouren.netlify.app/.netlify/functions/waline
+  lang: zh-CN
+  locale:
+    placeholder: 来都来了，说两句吧～
+  emoji:
+    - https://unpkg.com/@waline/emojis@1.3.0/tieba
+    - https://unpkg.com/@waline/emojis@1.3.0/bilibili
+  dark: auto
+  meta:
+    - nick
+    - mail
+    - link
+  requiredMeta:
+    - nick
+  login: enable
+  pageSize: 10
+  wordLimit: 500
+  copyright: true
 
 # Open graph meta tags
 Open_Graph_meta:
