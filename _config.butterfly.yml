@@ -121,13 +121,51 @@ comments:
   lazyload: true
   count: true
 
+# Open graph meta tags
+Open_Graph_meta:
+  enable: true
+  option:
+    twitter_card: summary_large_image
+
+# Structured Data
+structured_data:
+  enable: true
+  alternate_name:
+    - '贵州旅游攻略'
+    - '贵州88县市'
+    - 'guizhouren'
+
 # Inject custom CSS/JS
 inject:
   head:
-    # 百度统计 (获取ID: https://tongji.baidu.com)
-    # 替换 YOUR_BAIDU_ID 后取消注释
+    # 百度统计 (获取ID: https://tongji.baidu.com — 替换 YOUR_BAIDU_ID 后启用)
     # - '<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?YOUR_BAIDU_ID";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>'
-    # JSON-LD 结构化数据（Google富文本搜索结果）
+    # Google Analytics GA4 (替换 G-XXXXXXXXXX 后启用)
+    # - '<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>'
+    # JSON-LD 面包屑结构化数据（增强搜索结果展示）
+    - |
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var breadcrumb = [];
+        var siteUrl = 'https://guizhouren.netlify.app';
+        breadcrumb.push({'@type': 'ListItem', 'position': 1, 'name': '首页', 'item': siteUrl + '/'});
+        var cats = document.querySelector('.post-meta__categories a') || document.querySelector('#post-category a');
+        if (cats) {
+          breadcrumb.push({'@type': 'ListItem', 'position': 2, 'name': cats.textContent.trim(), 'item': siteUrl + cats.getAttribute('href')});
+        }
+        var title = document.querySelector('h1.page-title') || document.querySelector('h1.post-title');
+        if (title) {
+          breadcrumb.push({'@type': 'ListItem', 'position': breadcrumb.length + 1, 'name': title.textContent.trim(), 'item': window.location.href.split('?')[0].split('#')[0]});
+        }
+        if (breadcrumb.length > 1) {
+          var ld = document.getElementById('breadcrumb-ld');
+          if (ld) {
+            ld.textContent = JSON.stringify({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': breadcrumb});
+          }
+        }
+      });
+      </script>
+    # JSON-LD 网站结构化数据
     - |
       <script type="application/ld+json">
       {
@@ -142,6 +180,18 @@ inject:
           "query-input": "required name=search_term_string"
         }
       }
+      </script>
+    # 自动为封面图片添加 alt 属性
+    - |
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.article-sort-item-img img, #post-cover img').forEach(function(img) {
+          if (!img.alt) {
+            var title = document.querySelector('h1.page-title') || document.querySelector('h1.post-title');
+            img.alt = title ? title.textContent.trim() + ' 封面图' : '贵州旅游 封面图';
+          }
+        });
+      });
       </script>
   bottom:
 
