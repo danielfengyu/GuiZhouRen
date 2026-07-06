@@ -138,10 +138,10 @@ structured_data:
 # Inject custom CSS/JS
 inject:
   head:
-    # 百度统计 (获取ID: https://tongji.baidu.com — 替换 YOUR_BAIDU_ID 后启用)
-    # - '<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?YOUR_BAIDU_ID";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>'
-    # Google Analytics GA4 (替换 G-XXXXXXXXXX 后启用)
-    # - '<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>'
+    # 百度统计
+    - '<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?40f819b48bb6fa2edb21b46dd3525407";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>'
+    # Google Analytics GA4
+    - '<script async src="https://www.googletagmanager.com/gtag/js?id=G-X758DXBFRS"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-X758DXBFRS");</script>'
     # JSON-LD 面包屑结构化数据（增强搜索结果展示）
     - |
       <script>
