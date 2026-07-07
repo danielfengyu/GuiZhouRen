@@ -1,0 +1,6 @@
+{
+  "name": "waline-function",
+  "dependencies": {
+    "@waline/vercel": "^1.41.3"
+  }
+}

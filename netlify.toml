@@ -9,5 +9,6 @@
 [functions]
   node_bundler = "esbuild"
 
-[functions.waline]
+[[functions]]
+  function = "waline"
   external_node_modules = ["@waline/vercel"]
