@@ -7,8 +7,4 @@
   NODE_VERSION = "22"
 
 [functions]
-  node_bundler = "esbuild"
-
-[[functions]]
-  function = "waline"
-  external_node_modules = ["@waline/vercel"]
+  node_bundler = "none"
