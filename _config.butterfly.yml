@@ -124,7 +124,7 @@ comments:
 
 # Waline Configuration
 waline:
-  serverURL: https://guizhouren.netlify.app/.netlify/functions/waline
+  serverURL: https://waline-gz.vercel.app
   lang: zh-CN
   locale:
     placeholder: 来都来了，说两句吧～
