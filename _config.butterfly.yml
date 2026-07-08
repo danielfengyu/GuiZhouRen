@@ -121,20 +121,21 @@ comments:
   use:
     - Giscus
   text: true
-  lazyload: true
-  count: true
+  lazyload: false
+  count: false
 
 # Giscus Configuration
 giscus:
-  repo: danielfengyu/giscus-comments
+  repo: danielfengyu/GuiZhouRen
   repo_id: R_kgDOTN2n9w
   category_id: DIC_kwDOTN2n984DAxtR
   light_theme: light
-  dark_theme: dark
+  dark_theme: dark_dimmed
   option:
     data-mapping: pathname
     data-reactions-enabled: 1
-    data-input-position: top
+    data-emit-metadata: 0
+    data-input-position: bottom
     data-lang: zh-CN
 
 # Open graph meta tags
