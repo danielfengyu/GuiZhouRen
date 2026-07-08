@@ -114,34 +114,28 @@ beautify:
 pwa:
   enable: false
 
-# Comments: Waline (deployed on Netlify Functions + TiDB Serverless)
+# Comments: Giscus (GitHub Discussions, 零运维、零数据库、国内可访问)
+# 配置生成器：https://giscus.app/zh-CN
+# 仓库：danielfengyu/giscus-comments（需在 GitHub 仓库设置中开启 Discussions）
 comments:
   use:
-    - Waline
+    - Giscus
   text: true
   lazyload: true
   count: true
 
-# Waline Configuration
-waline:
-  serverURL: https://waline-gz.vercel.app
-  lang: zh-CN
-  locale:
-    placeholder: 来都来了，说两句吧～
-  emoji:
-    - https://unpkg.com/@waline/emojis@1.3.0/tieba
-    - https://unpkg.com/@waline/emojis@1.3.0/bilibili
-  dark: auto
-  meta:
-    - nick
-    - mail
-    - link
-  requiredMeta:
-    - nick
-  login: enable
-  pageSize: 10
-  wordLimit: 500
-  copyright: true
+# Giscus Configuration
+giscus:
+  repo: danielfengyu/giscus-comments
+  repo_id: R_kgDOTN2n9w
+  category_id: DIC_kwDOTN2n984DAxtR
+  light_theme: light
+  dark_theme: dark
+  option:
+    data-mapping: pathname
+    data-reactions-enabled: 1
+    data-input-position: top
+    data-lang: zh-CN
 
 # Open graph meta tags
 Open_Graph_meta:
