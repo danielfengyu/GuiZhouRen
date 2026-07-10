@@ -18,6 +18,7 @@ index_site_info_top: 150px
 menu:
   首页: / || fas fa-home
   文章: /archives/ || fas fa-archive
+  探索: /map/ || fas fa-map-marked-alt
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
   关于: /about/ || fas fa-heart
@@ -112,7 +113,12 @@ beautify:
 
 # PWA (Progressive Web App)
 pwa:
-  enable: false
+  enable: true
+  manifest: /manifest.json
+  apple_touch_icon: /img/butterfly-icon.png
+  favicon_32_32: /img/butterfly-icon.png
+  favicon_16_16: /img/favicon.ico
+  mask_icon: /img/butterfly-icon.png
 
 # Comments: Giscus (GitHub Discussions, 零运维、零数据库、国内可访问)
 # 配置生成器：https://giscus.app/zh-CN
@@ -211,6 +217,52 @@ inject:
       });
       </script>
   bottom:
+    # Service Worker 注册（PWA 离线访问）
+    - '<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").then(function(r){console.log("SW registered:",r.scope)}).catch(function(e){console.log("SW failed:",e)})})}</script>'
+    # 页面入场动画样式
+    - |
+      <style>
+        .article-sort-item,.recent-post-item,.relatedPosts,.post-content>h2,.post-content>h3,.post-content>p,.post-content>table,.post-content>blockquote,.post-content>ul,.post-content>ol{opacity:0;transform:translateY(20px);animation:fadeUp .5s ease forwards}
+        .article-sort-item:nth-child(2){animation-delay:.05s}
+        .article-sort-item:nth-child(3){animation-delay:.1s}
+        .article-sort-item:nth-child(4){animation-delay:.15s}
+        .article-sort-item:nth-child(5){animation-delay:.2s}
+        .article-sort-item:nth-child(6){animation-delay:.25s}
+        .article-sort-item:nth-child(7){animation-delay:.3s}
+        .article-sort-item:nth-child(8){animation-delay:.35s}
+        .recent-post-item:nth-child(2){animation-delay:.1s}
+        .recent-post-item:nth-child(3){animation-delay:.2s}
+        .recent-post-item:nth-child(4){animation-delay:.3s}
+        @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+        .random-post-btn{position:fixed;bottom:120px;right:20px;z-index:999;width:44px;height:44px;border-radius:50%;background:var(--btn-bg,#49b1f5);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:all .3s;font-size:18px;border:none;opacity:.85}
+        .random-post-btn:hover{opacity:1;transform:scale(1.1)}
+      </style>
+    # 随机文章按钮
+    - |
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var btn = document.createElement('button');
+          btn.className = 'random-post-btn';
+          btn.title = '随便看看';
+          btn.innerHTML = '<i class="fas fa-random"></i>';
+          btn.addEventListener('click', function() {
+            var x = new XMLHttpRequest();
+            x.onload = function() {
+              var d = document.createElement('div');
+              d.innerHTML = x.responseText;
+              var l = d.querySelectorAll('.article-title a');
+              if (l.length) {
+                location.href = l[Math.floor(Math.random() * l.length)].href;
+              } else {
+                location.href = '/archives/';
+              }
+            };
+            x.open('GET', '/archives/');
+            x.send();
+          });
+          document.body.appendChild(btn);
+        });
+      </script>
 
 # CDN settings
 cdn:

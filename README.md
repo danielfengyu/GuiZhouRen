@@ -4,26 +4,26 @@
 
 ```
 GuiZhouRen/
-├── _config.yml          # Hexo 主配置（已配好）
-├── package.json         # 依赖清单
-├── scaffolds/           # 文章模板
+├── _config.yml              # Hexo 主配置
+├── _config.butterfly.yml    # Butterfly 主题配置
+├── package.json             # 依赖清单
+├── netlify.toml             # Netlify 部署配置
+├── scaffolds/               # 文章模板
 ├── source/
-│   ├── _posts/          # 所有文章放这里
-│   │   ├── hello-guizhou.md          # 中文欢迎页
-│   │   ├── welcome-to-guizhou-en.md  # 英文欢迎页
-│   │   └── guiyang.md                # 贵阳示例文章
-│   ├── _data/
-│   │   └── butterfly.yml # Butterfly 主题配置
-│   └── about/
-│       └── index.md      # 关于页面
-└── themes/              # 主题目录（npm install 后会安装 Butterfly）
+│   ├── _posts/              # 88县市文章（99篇）
+│   ├── map/                 # 探索贵州页面
+│   ├── about/               # 关于页面
+│   ├── img/                 # 封面图（99张）
+│   ├── manifest.json        # PWA 清单
+│   └── sw.js                # Service Worker
+├── public/                  # 生成静态文件
+└── node_modules/            # 依赖
 ```
 
 ## 🚀 三步启动
 
 ### 1. 安装依赖
 ```powershell
-cd D:\Code\GuiZhouRen
 npm install
 ```
 
@@ -34,7 +34,7 @@ npx hexo server
 
 浏览器打开 `http://localhost:4000`
 
-### 3. 预览正常后，生成静态文件
+### 3. 生成静态文件
 ```powershell
 npx hexo generate
 ```
@@ -64,6 +64,14 @@ description: 简短描述
 
 正文内容（Markdown 格式）
 ```
+
+## ✨ 网站特色功能
+
+- 🗺️ **探索贵州** — 可视化分区展示 7 大地理板块，点击直达分类文章
+- 📱 **PWA 支持** — 可添加到手机桌面，离线也能访问已缓存页面
+- 🎲 **随机文章** — 右下角按钮一键随机跳转，发现未知角落
+- 🌊 **页面动画** — 入场渐显动画，浏览体验更流畅
+- 🏆 **必游榜单** — 探索页精选 TOP 10 目的地与美食
 
 ## 📝 贵州县市文章计划
 

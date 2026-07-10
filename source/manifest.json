@@ -1,0 +1,21 @@
+{
+  "name": "贵州黔行 - 走遍贵州88县市",
+  "short_name": "贵州黔行",
+  "description": "贵州全域旅游指南，覆盖88个县市的美食、景点、人文与出行攻略",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#49b1f5",
+  "icons": [
+    {
+      "src": "/img/butterfly-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/butterfly-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
